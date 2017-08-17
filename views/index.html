@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>index</title>
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		html,body{
+			width:100%;
+			height: 100%;
+		}
+		#content{
+			width:84%;
+			height: 100%;
+			float: left;
+		}
+		#sidebar{
+			width:15%;
+			height: 99%;
+			background: white;			
+			float: right;
+			border: 3px solid #ccc;
+			border-radius: 5px;
+		}
+		#show{
+			height: 80%;
+			background: #ccc;
+		}
+		#middle{
+			height:3%;
+			background: #eee;
+			border: 2px solid white;
+		}
+		#edit_con{
+			height:16%;
+			background: blue;
+		}
+		.wrap{
+			height:100%;
+			width:85%;
+			float: left;
+			background: yellow;
+		}
+		.edit{			
+			height:82%;
+			background: white;
+		}
+		.tigs{		
+			height:18%;	
+			background: #ccc;
+		}
+		.send{
+			height:100%;
+			width: 15%;
+			float: left;
+			background: #666;
+			color: white;
+			text-align: center;
+			line-height: 120px;
+			cursor: pointer;
+		}
+		#sidebar h4{
+			color: white;
+			border-radius: 6px;
+			background: #666;
+			text-align: center;
+		}
+		#sidebar ul {
+			width:90%;
+			margin: 10px auto;
+		}
+		#sidebar ul li{
+			list-style: none;
+			border-bottom: 1px dotted #ccc;
+			margin-top:2px; 
+		}
+		.all{
+			background: #ccc;
+			border:1px dotted #ccc;
+			border-radius: 5px;
+			color: blue;
+			cursor: pointer;
+		}
+
+		.sayingto{
+			background: #ccc;
+			color: blue;
+		}
+		#from{
+			color:orange;
+		}
+		#to{
+			color:blue;
+		}
+	</style>
+</head>
+<body>
+	<div id="content">
+		<div id="show">
+			
+		</div>
+		<div id="middle"></div>
+		<div id="edit_con">
+			<div class="wrap">
+				<div class="edit" id="input_content" contenteditable="true"></div>
+				<div class="tigs">
+					你好<span id="from"></span>,你正在对<span id="to"></span>说：
+				</div>
+			</div>
+			<div class="send" id="say">发送</div>
+		</div>
+	</div>
+	<div id="sidebar">
+		<h4>在线用户</h4>
+		<ul id="list">
+			<!--<li class="all">所有人</li>
+			<li>李四</li>
+			<li>王五</li>-->
+		</ul>
+	</div>
+	<script src="/javascripts/jquery-1.9.1.min.js"></script>
+	<script src="/javascripts/jquery.cookie.js"></script>
+	<script src="http://localhost:80/socket.io/socket.io.js"></script>
+	<script src="/javascripts/chat.js"></script>
+</body>
+</html>
